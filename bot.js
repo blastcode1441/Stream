@@ -37,4 +37,4 @@ if (message.content.startsWith(prefix + 's')) {
 });
 
 
-client.login('NDY3NzgyNjQyNTQ5NjUzNTE0.Drwlvg.i01LOj4rvyJ2gGyTPoWFyH2CFVE');
+client.login(process.env.BOT_TOKEN);
