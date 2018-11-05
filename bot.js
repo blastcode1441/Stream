@@ -5,28 +5,13 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', '♛『five』♛');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return;
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField('السلام وعليكم',`${member}`)
-        .addField('تبي تشتري تاقات او حسابات او اي شي رخيص ؟`)
-        .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
-                .addField('https://discord.gg/hfpFfDf`)
-               
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-                     
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                       
-     .setFooter(`${member.guild.name}`)
-        .setTimestamp()
-   
-      channel.sendEmbed(embed);
-    });
+client.on("guildMemberAdd", member => {
+    member.createDM().then(function (channel) {
+        return channel.send(`:rose:  ولكم نورت السيرفر :rose: 
+        https://discord.gg/hfpFfDf  
+        انت العضو رقم ${member.guild.memberCount} `) 
+    }).catch(console.error)
+})
 
 
 client.login(process.env.BOT_TOKEN);
