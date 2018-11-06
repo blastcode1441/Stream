@@ -1,11 +1,19 @@
 const Discord = require('discord.js');
-const A7MD = new Discord.Client();
-const Discord = require('discord.js');
 const client = new Discord.Client();
+const A7MD = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
+
+
+
+
+
+
+
+
+
 
 A7MD.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
