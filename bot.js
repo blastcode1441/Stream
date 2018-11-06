@@ -14,4 +14,4 @@ A7MD.on("guildMemberAdd", member => {
 **`) 
 }).catch(console.error)
 })
-A7MD.login('التوكين حقك');
+A7MD.login('BOT_TOKEN');
